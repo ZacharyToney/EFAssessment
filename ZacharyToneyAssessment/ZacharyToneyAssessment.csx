@@ -123,8 +123,11 @@ Zach.SendSaleNotice(DateTime.Parse("2016-08-01"));
 Zach.SendSaleNotice("Nexus 5x", DateTime.Parse("2016-08-01"));
 Zach.PrintCustomerInfo();
 
-var Rachel = new InactiveCustomer("Rachel", Gender.Female, "iPhone",6);
-
+var Rachel =
+    new InactiveCustomer("Rachel", Gender.Female, "iPhone", 6)
+    {
+        whyleft = InactiveCustomer.Reasons.Moved
+    };
 Rachel.thankyou();
 Rachel.SendRetargetMessage();
 Rachel.PrintCustomerInfo();
